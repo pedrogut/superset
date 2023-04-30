@@ -96,12 +96,8 @@ else:
 # ---------------------------------------------------------
 # Superset specific config
 # ---------------------------------------------------------
-VERSION_INFO_FILE = pkg_resources.resource_filename(
-    "superset", "static/version_info.json"
-)
-PACKAGE_JSON_FILE = pkg_resources.resource_filename(
-    "superset", "static/assets/package.json"
-)
+VERSION_INFO_FILE = pkg_resources.resource_filename("superset", "static/version_info.json")
+PACKAGE_JSON_FILE = pkg_resources.resource_filename("superset", "static/assets/package.json")
 
 # Multiple favicons can be specified here. The "href" property
 # is mandatory, but "sizes," "type," and "rel" are optional.
@@ -112,7 +108,7 @@ PACKAGE_JSON_FILE = pkg_resources.resource_filename(
 #     "type": "image/png"
 #     "rel": "icon"
 # },
-FAVICONS = [{"href": "/static/assets/images/favicon.png"}]
+FAVICONS = [{"href": "/static/assets/images/argentina.ico"}]
 
 
 def _try_json_readversion(filepath: str) -> Optional[str]:
@@ -142,9 +138,7 @@ ALEMBIC_SKIP_LOG_CONFIG = False
 # actually running Superset, we will have already installed,
 # therefore it WILL exist. When unit tests are running, however,
 # it WILL NOT exist, so we fall back to reading package.json
-VERSION_STRING = _try_json_readversion(VERSION_INFO_FILE) or _try_json_readversion(
-    PACKAGE_JSON_FILE
-)
+VERSION_STRING = _try_json_readversion(VERSION_INFO_FILE) or _try_json_readversion(PACKAGE_JSON_FILE)
 
 VERSION_SHA_LENGTH = 8
 VERSION_SHA = _try_json_readsha(VERSION_INFO_FILE, VERSION_SHA_LENGTH)
@@ -241,9 +235,7 @@ SQLALCHEMY_CUSTOM_PASSWORD_STORE = None
 #
 #
 #  SQLALCHEMY_ENCRYPTED_FIELD_TYPE_ADAPTER = AesGcmEncryptedAdapter
-SQLALCHEMY_ENCRYPTED_FIELD_TYPE_ADAPTER = (  # pylint: disable=invalid-name
-    SQLAlchemyUtilsAdapter
-)
+SQLALCHEMY_ENCRYPTED_FIELD_TYPE_ADAPTER = SQLAlchemyUtilsAdapter  # pylint: disable=invalid-name
 # The limit of queries fetched for query search
 QUERY_SEARCH_LIMIT = 1000
 
@@ -285,7 +277,7 @@ SCHEDULED_QUERIES: Dict[str, Any] = {}
 APP_NAME = "Superset"
 
 # Specify the App icon
-APP_ICON = "/static/assets/images/superset-logo-horiz.png"
+APP_ICON = "/static/assets/images/argentinagob.png"
 
 # Specify where clicking the logo would take the user
 # e.g. setting it to '/' would take the user to '/superset/welcome/'
@@ -348,13 +340,13 @@ AUTH_TYPE = AUTH_DB
 # Grant public role the same set of permissions as for a selected builtin role.
 # This is useful if one wants to enable anonymous users to view
 # dashboards. Explicit grant on specific datasets is still required.
-PUBLIC_ROLE_LIKE: Optional[str] = None
+PUBLIC_ROLE_LIKE: Optional[str] = "Gamma"
 
 # ---------------------------------------------------
 # Babel config for translations
 # ---------------------------------------------------
 # Setup default language
-BABEL_DEFAULT_LOCALE = "en"
+BABEL_DEFAULT_LOCALE = "es"
 # Your application default translation path
 BABEL_DEFAULT_FOLDER = "superset/translations"
 # The allowed translation for you app
@@ -376,7 +368,7 @@ LANGUAGES = {
 }
 # Turning off i18n by default as translation in most languages are
 # incomplete and not well maintained.
-LANGUAGES = {}
+LANGUAGES = {"en": {"flag": "us", "name": "English"}, "es": {"flag": "es", "name": "Spanish"}}
 
 # ---------------------------------------------------
 # Feature flags
@@ -544,9 +536,7 @@ IS_FEATURE_ENABLED_FUNC: Optional[Callable[[str, Optional[bool]], bool]] = None
 #
 # Takes as a parameter the common bootstrap payload before transformations.
 # Returns a dict containing data that should be added or overridden to the payload.
-COMMON_BOOTSTRAP_OVERRIDES_FUNC: Callable[
-    [Dict[str, Any]], Dict[str, Any]
-] = lambda data: {}  # default: empty dict
+COMMON_BOOTSTRAP_OVERRIDES_FUNC: Callable[[Dict[str, Any]], Dict[str, Any]] = lambda data: {}  # default: empty dict
 
 # EXTRA_CATEGORICAL_COLOR_SCHEMES is used for adding custom categorical color schemes
 # example code for "My custom warm to hot" color scheme
@@ -623,9 +613,7 @@ THUMBNAIL_EXECUTE_AS = [ExecutorType.SELENIUM]
 # `THUMBNAIL_EXECUTE_AS`; the executor is only equal to the currently logged in
 # user if the executor type is equal to `ExecutorType.CURRENT_USER`)
 # and return the final digest string:
-THUMBNAIL_DASHBOARD_DIGEST_FUNC: Optional[
-    Callable[[Dashboard, ExecutorType, str], str]
-] = None
+THUMBNAIL_DASHBOARD_DIGEST_FUNC: Optional[Callable[[Dashboard, ExecutorType, str], str]] = None
 THUMBNAIL_CHART_DIGEST_FUNC: Optional[Callable[[Slice, ExecutorType, str], str]] = None
 
 THUMBNAIL_CACHE_CONFIG: CacheConfig = {
@@ -959,9 +947,7 @@ SQLLAB_QUERY_COST_ESTIMATE_TIMEOUT = int(timedelta(seconds=10).total_seconds())
 #     return out
 #
 # QUERY_COST_FORMATTERS_BY_ENGINE: {"postgresql": postgres_query_cost_formatter}
-QUERY_COST_FORMATTERS_BY_ENGINE: Dict[
-    str, Callable[[List[Dict[str, Any]]], List[Dict[str, Any]]]
-] = {}
+QUERY_COST_FORMATTERS_BY_ENGINE: Dict[str, Callable[[List[Dict[str, Any]]], List[Dict[str, Any]]]] = {}
 
 # Flag that controls if limit should be enforced on the CTA (create table as queries).
 SQLLAB_CTAS_NO_LIMIT = False
@@ -985,9 +971,7 @@ SQLLAB_CTAS_NO_LIMIT = False
 #         else:
 #             return f'tmp_{schema}'
 # Function accepts database object, user object, schema name and sql that will be run.
-SQLLAB_CTAS_SCHEMA_NAME_FUNC: Optional[
-    Callable[[Database, models.User, str, str], str]
-] = None
+SQLLAB_CTAS_SCHEMA_NAME_FUNC: Optional[Callable[[Database, models.User, str, str], str]] = None
 
 # If enabled, it can be used to store the results of long-running queries
 # in SQL Lab by using the "Run Async" button/feature
@@ -1016,9 +1000,7 @@ def CSV_TO_HIVE_UPLOAD_DIRECTORY_FUNC(  # pylint: disable=invalid-name
     schema: Optional[str],
 ) -> str:
     # Note the final empty path enforces a trailing slash.
-    return os.path.join(
-        CSV_TO_HIVE_UPLOAD_DIRECTORY, str(database.id), schema or "", ""
-    )
+    return os.path.join(CSV_TO_HIVE_UPLOAD_DIRECTORY, str(database.id), schema or "", "")
 
 
 # The namespace within hive where the tables created from
@@ -1031,9 +1013,7 @@ UPLOADED_CSV_HIVE_NAMESPACE: Optional[str] = None
 
 # mypy doesn't catch that if case ensures list content being always str
 ALLOWED_USER_CSV_SCHEMA_FUNC: Callable[[Database, models.User], List[str]] = (
-    lambda database, user: [UPLOADED_CSV_HIVE_NAMESPACE]
-    if UPLOADED_CSV_HIVE_NAMESPACE
-    else []
+    lambda database, user: [UPLOADED_CSV_HIVE_NAMESPACE] if UPLOADED_CSV_HIVE_NAMESPACE else []
 )
 
 # Values that should be treated as nulls for the csv uploads.
@@ -1182,9 +1162,7 @@ DB_CONNECTION_MUTATOR = None
 # For backward compatibility, you can unpack any of the above arguments in your
 # function definition, but keep the **kwargs as the last argument to allow new args
 # to be added later without any errors.
-def SQL_QUERY_MUTATOR(  # pylint: disable=invalid-name,unused-argument
-    sql: str, **kwargs: Any
-) -> str:
+def SQL_QUERY_MUTATOR(sql: str, **kwargs: Any) -> str:  # pylint: disable=invalid-name,unused-argument
     return sql
 
 
@@ -1438,15 +1416,11 @@ GLOBAL_ASYNC_QUERIES_REDIS_STREAM_LIMIT = 1000
 GLOBAL_ASYNC_QUERIES_REDIS_STREAM_LIMIT_FIREHOSE = 1000000
 GLOBAL_ASYNC_QUERIES_JWT_COOKIE_NAME = "async-token"
 GLOBAL_ASYNC_QUERIES_JWT_COOKIE_SECURE = False
-GLOBAL_ASYNC_QUERIES_JWT_COOKIE_SAMESITE: Optional[
-    Literal["None", "Lax", "Strict"]
-] = None
+GLOBAL_ASYNC_QUERIES_JWT_COOKIE_SAMESITE: Optional[Literal["None", "Lax", "Strict"]] = None
 GLOBAL_ASYNC_QUERIES_JWT_COOKIE_DOMAIN = None
 GLOBAL_ASYNC_QUERIES_JWT_SECRET = "test-secret-change-me"
 GLOBAL_ASYNC_QUERIES_TRANSPORT = "polling"
-GLOBAL_ASYNC_QUERIES_POLLING_DELAY = int(
-    timedelta(milliseconds=500).total_seconds() * 1000
-)
+GLOBAL_ASYNC_QUERIES_POLLING_DELAY = int(timedelta(milliseconds=500).total_seconds() * 1000)
 GLOBAL_ASYNC_QUERIES_WEBSOCKET_URL = "ws://127.0.0.1:8080/"
 
 # Embedded config options
@@ -1509,9 +1483,7 @@ ADVANCED_DATA_TYPES: Dict[str, AdvancedDataType] = {
 #     "Xyz",
 #     [{"col": 'created_by', "opr": 'rel_o_m', "value": 10}],
 # )
-WELCOME_PAGE_LAST_TAB: Union[
-    Literal["examples", "all"], Tuple[str, List[Dict[str, Any]]]
-] = "all"
+WELCOME_PAGE_LAST_TAB: Union[Literal["examples", "all"], Tuple[str, List[Dict[str, Any]]]] = "all"
 
 # Configuration for environment tag shown on the navbar. Setting 'text' to '' will hide the tag.
 # 'color' can either be a hex color code, or a dot-indexed theme color (e.g. error.base)
@@ -1573,9 +1545,7 @@ if CONFIG_PATH_ENV_VAR in os.environ:
 
         print(f"Loaded your LOCAL configuration at [{cfg_path}]")
     except Exception:
-        logger.exception(
-            "Failed to import config for %s=%s", CONFIG_PATH_ENV_VAR, cfg_path
-        )
+        logger.exception("Failed to import config for %s=%s", CONFIG_PATH_ENV_VAR, cfg_path)
         raise
 elif importlib.util.find_spec("superset_config") and not is_test():
     try:

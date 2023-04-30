@@ -4284,6 +4284,7 @@
       "Week_ending Sunday": ["Domingo de fin de semana"],
       "Weekly Report for %s": ["Informe semanal de %s"],
       "Weekly seasonality": ["Estacionalidad semanal"],
+      "Weight": ["Peso"],
       "What should be shown on the label?": [
         "¿Qué se debe mostrar en la etiqueta?"
       ],
@@ -4490,6 +4491,7 @@
       "Y-axis bounds": ["Límites del eje Y"],
       "Year (freq=AS)": ["Año (frec=AS)"],
       "Yearly seasonality": ["Estacionalidad anual"],
+      "Years %s": ["Años %s"],
       "Yes": ["Sí"],
       "Yes, cancel": ["Sí, cancelar"],
       "Yes, overwrite changes": ["Sí, sobrescribir cambios"],

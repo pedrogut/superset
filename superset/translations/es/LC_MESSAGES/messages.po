@@ -242,7 +242,7 @@ msgstr "%s Error"
 #: superset-frontend/src/features/databases/DatabaseModal/index.tsx:1300
 #, fuzzy, python-format
 msgid "%s PASSWORD"
-msgstr "Contraseña de Broker"
+msgstr "%s CONTRASEÑA"
 
 #: superset-frontend/src/components/ImportModal/index.tsx:318
 #: superset-frontend/src/features/databases/DatabaseModal/index.tsx:1318
@@ -1846,7 +1846,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/hooks.ts:304
 #, fuzzy, python-format
 msgid "An error occurred while creating %ss: %s"
-msgstr "Se produjo un error al obtener conjuntos de datos: %s"
+msgstr "Se produjo un error al crear %ss: %s"
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1529
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:1551
@@ -1878,14 +1878,14 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/hooks.ts:106
 #, fuzzy, python-format
 msgid "An error occurred while fetching %s info: %s"
-msgstr "Se produjo un error al obtener los dashboards: %s"
+msgstr "Se produjo un error al obtener %s info: %s"
 
 #: superset-frontend/src/views/CRUD/hooks.ts:174
 #: superset-frontend/src/views/CRUD/hooks.ts:261
 #: superset-frontend/src/views/CRUD/hooks.ts:349
 #, fuzzy, python-format
 msgid "An error occurred while fetching %ss: %s"
-msgstr "Se produjo un error al obtener conjuntos de datos: %s"
+msgstr "Se produjo un error al obtener %ss: %s"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:130
 msgid "An error occurred while fetching available CSS templates"
@@ -2034,7 +2034,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/hooks.ts:518
 #, fuzzy, python-format
 msgid "An error occurred while importing %s: %s"
-msgstr "Se produjo un error al limpiar los registros"
+msgstr "Se produjo un error al importar %s: %s"
 
 #: superset-frontend/src/components/Chart/chartAction.js:579
 msgid "An error occurred while loading the SQL"
@@ -2200,7 +2200,7 @@ msgstr "Anotación"
 #: superset-frontend/src/pages/AnnotationList/index.tsx:259
 #, fuzzy, python-format
 msgid "Annotation Layer %s"
-msgstr "Capas de Anotación"
+msgstr "Capa de Anotación %s"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/annotationsAndLayers.tsx:36
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:127
@@ -2419,7 +2419,7 @@ msgstr "Filtros aplicados (%d)"
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterControls/FilterControls.tsx:260
 #, fuzzy, python-format
 msgid "Applied filters: %s"
-msgstr "Filtros aplicados (%d)"
+msgstr "Filtros aplicados: %s"
 
 #: superset/viz.py:246
 msgid ""
@@ -2495,7 +2495,7 @@ msgstr "onfirma que quieres eliminar"
 #: superset-frontend/src/pages/AnnotationList/index.tsx:282
 #, fuzzy, python-format
 msgid "Are you sure you want to delete %s?"
-msgstr "onfirma que quieres eliminar"
+msgstr "¿Está seguro que quiere eliminar %s?"
 
 #: superset-frontend/src/pages/AlertReportList/index.tsx:584
 #, python-format
@@ -3570,17 +3570,17 @@ msgstr "Tipo de dato"
 #: superset-frontend/src/explore/actions/saveModalActions.js:127
 #, fuzzy, python-format
 msgid "Chart [%s] has been overwritten"
-msgstr "El gráfico [{}] ha sido sobreescrito"
+msgstr "El gráfico [%s] ha sido sobreescrito"
 
 #: superset-frontend/src/explore/actions/saveModalActions.js:124
 #, fuzzy, python-format
 msgid "Chart [%s] has been saved"
-msgstr "El gráfico [{}] ha sido guardado"
+msgstr "El gráfico [%s] ha sido guardado"
 
 #: superset-frontend/src/explore/actions/saveModalActions.js:145
 #, fuzzy, python-format
 msgid "Chart [%s] was added to dashboard [%s]"
-msgstr "El gráfico [{}] ha sido añadido al dashboard [{}]"
+msgstr "El gráfico [%s] ha sido añadido al dashboard [%s]"
 
 #: superset/views/core.py:1077
 msgid "Chart [{}] has been overwritten"
@@ -3999,12 +3999,12 @@ msgstr "Click para editar"
 #: superset-frontend/src/dashboard/util/getSliceHeaderTooltip.tsx:27
 #, fuzzy, python-format
 msgid "Click to edit %s in a new tab"
-msgstr "Click para editar"
+msgstr "Click para editar %s en una nueva pestaña"
 
 #: superset-frontend/src/dashboard/util/getSliceHeaderTooltip.tsx:32
 #, fuzzy, python-format
 msgid "Click to edit %s."
-msgstr "Click para editar"
+msgstr "Click para editar %s."
 
 #: superset-frontend/src/dashboard/util/getSliceHeaderTooltip.tsx:28
 #: superset-frontend/src/dashboard/util/getSliceHeaderTooltip.tsx:33
@@ -5118,7 +5118,7 @@ msgstr "Dashboard"
 #, fuzzy, python-format
 msgid "Dashboard [%s] just got created and chart [%s] was added to it"
 msgstr ""
-"El dashboard [{}] ha sido creado y el gráfico [{}] ha sido añadido a él"
+"El dashboard [%s] ha sido creado y el gráfico [%s] ha sido añadido a él"
 
 #: superset/views/core.py:1122
 msgid "Dashboard [{}] just got created and chart [{}] was added to it"
@@ -5645,7 +5645,7 @@ msgstr "Día (frecuencia=D)"
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:65
 #, fuzzy, python-format
 msgid "Days %s"
-msgstr "día"
+msgstr "Días %s"
 
 #: superset/connectors/sqla/models.py:1936 superset/models/helpers.py:988
 msgid "Db engine did not return all queried columns"
@@ -6393,7 +6393,7 @@ msgstr "La exploración por aún no es compatible con este tipo de gráfico"
 #: superset-frontend/src/components/Chart/DrillBy/DrillByModal.tsx:154
 #, fuzzy, python-format
 msgid "Drill by: %s"
-msgstr "Ordenar por"
+msgstr "Perforar por: %s"
 
 #: superset-frontend/src/components/Chart/DrillDetail/DrillDetailMenuItems.tsx:124
 #: superset-frontend/src/components/Chart/DrillDetail/DrillDetailMenuItems.tsx:139
@@ -7167,12 +7167,12 @@ msgstr "Error obteniendo datos"
 #: superset-frontend/src/explore/components/controls/SelectAsyncControl/index.tsx:89
 #, fuzzy, python-format
 msgid "Error while fetching data: %s"
-msgstr "Error obteniendo datos"
+msgstr "Error al obtener datos: %s"
 
 #: superset/connectors/sqla/models.py:953 superset/models/helpers.py:1029
 #, fuzzy, python-format
 msgid "Error while rendering virtual dataset query: %(msg)s"
-msgstr "Error al guardar el conjunto de datos: %s"
+msgstr "Error al renderizar la query virtual del dataset: %(msg)s"
 
 #: superset/charts/data/commands/get_data_command.py:55
 #, python-format
@@ -8344,7 +8344,7 @@ msgstr "hora"
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:64
 #, fuzzy, python-format
 msgid "Hours %s"
-msgstr "hora"
+msgstr "Horas %s"
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:953
 msgid "Hours offset"
@@ -8690,7 +8690,7 @@ msgstr "JSON inválido"
 #: superset/advanced_data_type/api.py:100
 #, fuzzy, python-format
 msgid "Invalid advanced data type: %(advanced_data_type)s"
-msgstr "rolling_type inválido: %(type)s"
+msgstr "Tipo de datos avanzado inválido: %(advanced_data_type)s"
 
 #: superset/databases/schemas.py:186 superset/exceptions.py:196
 msgid "Invalid certificate"
@@ -8787,7 +8787,7 @@ msgstr "Clave de enlace permanente no válida"
 #: superset/common/query_actions.py:228
 #, fuzzy, python-format
 msgid "Invalid result type: %(result_type)s"
-msgstr "rolling_type inválido: %(type)s"
+msgstr "Tipo de resultado inválido: %(result_type)s"
 
 #: superset/utils/pandas_postprocessing/rolling.py:84
 #, python-format
@@ -9123,7 +9123,7 @@ msgstr "Última actualización %s"
 #: superset-frontend/src/dashboard/components/OverwriteConfirm/OverwriteConfirmModal.tsx:182
 #, fuzzy, python-format
 msgid "Last Updated %s by %s"
-msgstr "Última actualización %s"
+msgstr "Última actualización %s por %s"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberViz.tsx:86
 #, python-format
@@ -10135,7 +10135,7 @@ msgstr "minuto"
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:63
 #, fuzzy, python-format
 msgid "Minutes %s"
-msgstr "minuto"
+msgstr "Minutos %s"
 
 #: superset-frontend/src/explore/components/controls/DatasourceControl/index.jsx:401
 #, fuzzy
@@ -10202,7 +10202,7 @@ msgstr "mes"
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:67
 #, fuzzy, python-format
 msgid "Months %s"
-msgstr "mes"
+msgstr "Meses %s"
 
 #: superset-frontend/src/components/DropdownContainer/index.tsx:121
 #, fuzzy
@@ -13077,7 +13077,7 @@ msgstr "Resultados"
 #: superset-frontend/src/explore/components/DataTablesPane/components/ResultsPaneOnDashboard.tsx:84
 #, fuzzy, python-format
 msgid "Results %s"
-msgstr "Resultados"
+msgstr "Resultados %s"
 
 #: superset/sql_lab.py:410 superset/sqllab/commands/results.py:59
 #: superset/views/core.py:2133
@@ -13950,7 +13950,7 @@ msgstr "Título del eje y secundario"
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:62
 #, fuzzy, python-format
 msgid "Seconds %s"
-msgstr "30 segundos"
+msgstr "Segundos %s"
 
 #: superset/views/database/mixins.py:194
 msgid "Secure Extra"
@@ -13975,7 +13975,7 @@ msgstr "Seguridad & Acceso"
 #: superset-frontend/src/features/home/EmptyState.tsx:183
 #, fuzzy, python-format
 msgid "See all %(tableName)s"
-msgstr "Explorar - %(table)s"
+msgstr "Ver todas %(tableName)s"
 
 #: superset-frontend/src/components/ErrorMessage/ErrorAlert.tsx:172
 msgid "See less"
@@ -14942,8 +14942,7 @@ msgstr "Lo sentimos, parece que no hay datos"
 #: superset-frontend/src/utils/getClientErrorObject.ts:100
 #, fuzzy, python-format
 msgid "Sorry, there was an error saving this %s: %s"
-msgstr ""
-"Lo sentimos, hubo un error al obtener la información de la base de datos: %s"
+msgstr "Lo sentimos, hubo un error al guardar este %s: %s"
 
 #: superset-frontend/src/dashboard/actions/dashboardState.js:360
 #, fuzzy, python-format
@@ -15022,7 +15021,7 @@ msgstr "Ordenar por"
 #: superset-frontend/src/dashboard/components/SliceAdder.jsx:362
 #, fuzzy, python-format
 msgid "Sort by %s"
-msgstr "Ordenar por"
+msgstr "Ordenar por %s"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:43
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.tsx:95
@@ -15983,8 +15982,9 @@ msgid ""
 "to continue? Deleting the database will break those objects."
 msgstr ""
 "La base de datos %s está vinculada a %s gráficos que aparecen en %s "
-"dashboards. ¿Estás seguro de que quieres continuar? Eliminar la base de "
-"datos dejará inutilizables esos objetos."
+"dashboards y hay usuarios que tienen %s pestañas de SQL Lab utilizando"
+"esta base de datos abiertas. ¿Estás seguro de que quieres continuar? "
+"Eliminar la base de datos dejará inutilizables esos objetos."
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/utilities/Shared_DeckGL.jsx:198
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/utilities/sharedDndControls.jsx:28
@@ -16682,7 +16682,7 @@ msgstr "El usuario parece haber sido eliminado"
 #: superset/db_engine_specs/postgres.py:115
 #, fuzzy, python-format
 msgid "The username \"%(username)s\" does not exist."
-msgstr "La métrica '%(metric)s' no existe"
+msgstr "El nombre de usuario \"%(username)s\" no existe."
 
 #: superset/errors.py:113
 msgid "The username provided when connecting to a database is not valid."
@@ -16905,12 +16905,12 @@ msgstr "Hubo un problema al eliminar: %s"
 #: superset-frontend/src/pages/Home/index.tsx:270
 #, fuzzy, python-format
 msgid "There was an issue fetching your dashboards: %s"
-msgstr "Hubo un problema al eliminar los dashboards seleccionados: "
+msgstr "Hubo un problema al obtener tus dashboards: %s"
 
 #: superset-frontend/src/pages/Home/index.tsx:248
 #, fuzzy, python-format
 msgid "There was an issue fetching your recent activity: %s"
-msgstr "Hubo un error al obtener tu actividad reciente:"
+msgstr "Hubo un problema al obtener tu actividad reciente: %s"
 
 #: superset-frontend/src/pages/Home/index.tsx:293
 #, fuzzy, python-format
@@ -17813,7 +17813,7 @@ msgstr "Valores Nulos"
 #: superset-frontend/plugins/plugin-chart-echarts/src/Sunburst/transformProps.ts:359
 #, fuzzy, python-format
 msgid "Total: %s"
-msgstr "Totales"
+msgstr "Total: %s"
 
 #: superset-frontend/plugins/plugin-chart-table/src/TableChart.tsx:619
 msgid "Totals"
@@ -18171,7 +18171,7 @@ msgstr "Error inesperado: "
 #: superset/views/api.py:109
 #, fuzzy, python-format
 msgid "Unexpected time range: %s"
-msgstr "Error inesperado: "
+msgstr "Rango de tiempo inesperado: %s"
 
 #: superset-frontend/src/features/home/ActivityTable.tsx:86
 #, fuzzy
@@ -18338,7 +18338,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/util/getSliceHeaderTooltip.tsx:36
 #, fuzzy, python-format
 msgid "Use %s to open in a new tab."
-msgstr "Consulta en nueva pestaña"
+msgstr "Utilice %s para abrir en una nueva pestaña."
 
 #: superset-frontend/plugins/legacy-plugin-chart-rose/src/controlPanel.tsx:104
 #: superset-frontend/src/explore/controlUtils/controlUtils.test.tsx:113
@@ -18668,7 +18668,7 @@ msgstr "Visto"
 #: superset-frontend/src/features/home/ActivityTable.tsx:115
 #, fuzzy, python-format
 msgid "Viewed %s"
-msgstr "Visto"
+msgstr "Vistos %s"
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:273
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/utilities/Shared_DeckGL.jsx:293
@@ -19019,13 +19019,12 @@ msgstr "Estacionalidad semanal"
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:66
 #, fuzzy, python-format
 msgid "Weeks %s"
-msgstr "semana"
+msgstr "Semanas %s"
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Screengrid/Screengrid.jsx:49
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Screengrid/controlPanel.ts:77
-#, fuzzy
 msgid "Weight"
-msgstr "Altura"
+msgstr "Peso"
 
 #: superset-frontend/src/components/ErrorMessage/TimeoutErrorMessage.tsx:52
 #, fuzzy, python-format
@@ -19705,9 +19704,9 @@ msgid "Yearly seasonality"
 msgstr "Estacionalidad anual"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:69
-#, fuzzy, python-format
+#, python-format
 msgid "Years %s"
-msgstr "año"
+msgstr "Años %s"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:88
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/forecastInterval.tsx:107
@@ -19857,7 +19856,7 @@ msgstr ""
 #: superset-frontend/src/utils/getClientErrorObject.ts:107
 #, fuzzy, python-format
 msgid "You do not have permission to edit this %s"
-msgstr "No tienes permiso para aprobar esta solicitud."
+msgstr "No tienes permiso para editar este %s."
 
 #: superset-frontend/src/explore/components/PropertiesModal/index.tsx:94
 msgid "You do not have permission to edit this chart"
@@ -21367,3 +21366,4 @@ msgstr "amarillo"
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/transformProps.ts:490
 msgid "zoom area"
 msgstr "área de zoom"
+
